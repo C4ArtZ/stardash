@@ -1,0 +1,17 @@
+{
+  "name": "Stardash",
+  "version": "1.0",
+  "description": "Service dashboard to jump start your browsing",
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "permissions": ["tabs","storage"],
+  "manifest_version": 2,
+  "icons": { "16": "assets/favicons/favicon16.png",
+    "48": "assets/favicons/favicon48.png",
+    "128": "assets/favicons/favicon128.png" },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": false
+  }
+}

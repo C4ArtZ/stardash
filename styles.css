@@ -1,0 +1,145 @@
+:root {
+    --black: #111827;
+    --white: #e0e0e0;
+    --gray-800: #1F2937;
+    --gray-700: #374151;
+    --gray-600: #4B5563;
+    --gray-500: #6B7280;
+    --gray-400: #9CA3AF;
+    --gray-300: #D1D5DB;
+    --accent: #366cae;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: var(--white);
+    /*background: rgb(22,31,51);*/
+    /*background: radial-gradient(circle, rgba(22,31,51,1) 25%, rgba(17,24,39,1) 100%);*/
+    background: var(--black);
+    overflow: hidden;
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    width: 100vw;
+}
+
+#clouds {
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    transform: scaleX(1.1);
+}
+
+#clouds g * {
+    fill-opacity: 1;
+
+}
+
+#clouds g :first-child {
+    fill: #121e37;
+    /*transform: translateY(2rem);*/
+    animation: MoveUpDown 5s ease-in-out infinite;
+    animation-delay: 750ms;
+}
+
+#clouds g :nth-child(2) {
+    fill: #182a4d;
+    filter: drop-shadow(1rem -0.5rem 1rem #121e38);
+    /*transform: translateY(1rem);*/
+    animation: MoveUpDown 5s ease-in-out infinite;
+    animation-delay: 2000ms;
+}
+
+#clouds g :nth-child(3) {
+    fill: #203e6b;
+    filter: drop-shadow(1rem -0.5rem 1rem #142546);
+    /*transform: translateY(1rem);*/
+    animation: MoveUpDown 5s ease-in-out infinite;
+
+}
+
+#clouds g :last-child {
+    fill: #5b6f8f;
+    filter: drop-shadow(1rem -0.5rem 1rem #1a3357);
+    animation: MoveUpDown 5s ease-in-out infinite;
+    animation-delay: 500ms;
+}
+
+nav {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+.navitem {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    padding: 0 2rem 0 2rem;
+}
+
+.navitem:first-child {
+    justify-content: start;
+}
+
+.navitem:last-child {
+    justify-content: end;
+}
+
+
+#home {
+    height: 3rem;
+    fill: var(--white);
+    transition: 300ms;
+}
+
+#home:hover {
+    fill: var(--accent);
+    cursor: pointer;
+}
+
+#time{
+    /*font-family: 'Darker Grotesque', sans-serif;*/
+    font-weight: normal;
+    font-size: 2.5rem;
+}
+
+#greeting{
+    font-weight: normal;
+}
+
+
+
+.noselect {
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Old versions of Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+}
+
+@keyframes MoveUpDown {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(0.25rem);
+    }
+}
